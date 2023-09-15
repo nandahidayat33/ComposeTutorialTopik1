@@ -15,19 +15,24 @@ import id.utdi.composetutorialtopik1.ui.theme.ComposeTutorialTopik1Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Menetapkan tampilan konten utama aplikasi menggunakan Composable function MessageCard
         setContent {
             MessageCard("Android")
         }
     }
 }
 
+// Composable function untuk menampilkan teks pesan
 @Composable
 fun MessageCard(name: String) {
+    // Menampilkan teks "Hello [nama]!" menggunakan komponen Text
     Text(text = "Hello $name!")
 }
 
+// Composable function untuk preview tampilan MessageCard
 @Preview
 @Composable
 fun PreviewMessageCard() {
+    // Menampilkan preview MessageCard dengan nama "Android"
     MessageCard("Android")
 }
